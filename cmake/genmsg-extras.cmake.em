@@ -77,6 +77,7 @@ macro(_prepend_path ARG_PATH ARG_FILES ARG_OUTPUT_VAR)
 endmacro()
 
 macro(add_message_files)
+  message(STATUS "Running add_message_files!")
   cmake_parse_arguments(ARG "NOINSTALL" "DIRECTORY;BASE_DIR" "FILES" ${ARGN})
   if(ARG_UNPARSED_ARGUMENTS)
     message(FATAL_ERROR "add_message_files() called with unused arguments: ${ARG_UNPARSED_ARGUMENTS}")
